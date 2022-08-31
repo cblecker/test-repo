@@ -9,7 +9,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - uses: andymckay/labeler@1.0.4
+      - uses: actions-ecosystem/action-remove-labels@v1
         if: github.event.review.state == 'changes_requested'
         with:
           remove-labels: "ready-for-review"
